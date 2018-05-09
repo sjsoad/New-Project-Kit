@@ -10,6 +10,7 @@
 	<string>class func &lt;#module name#&gt;Module(servicesRepository: ServicesRepository) -&gt; Module&lt;&lt;#presenter class#&gt;, UIViewController&gt; {
     let viewController = &lt;#UIViewController class#&gt;()
     let presenter = &lt;#presenter class#&gt;(with: viewController, servicesRepository: servicesRepository)
+    viewController.presenter = presenter
         return Module(presenter: presenter, interface: viewController)
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
