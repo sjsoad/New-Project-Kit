@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class func &lt;#module name#&gt;Module(servicesRepository: ServicesRepository) -&gt; Module&lt;&lt;#presenter class#&gt;, UIViewController&gt; {
+    let viewController = &lt;#UIViewController class#&gt;()
+    let presenter = &lt;#presenter class#&gt;(with: viewController, servicesRepository: servicesRepository)
+        return Module(presenter: presenter, interface: viewController)
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2A8F596A-4344-423F-81F6-B23BD2841292</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create Module Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
