@@ -14,3 +14,7 @@ Templates should be copied to ~/Library/Developer/Xcode/UserData/CodeSnippets/
 # Files
 
 Files should be copied to the project
+
+# TODO
+
+Add validators factory with email and password validators  
