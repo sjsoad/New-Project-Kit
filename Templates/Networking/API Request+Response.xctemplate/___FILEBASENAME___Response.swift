@@ -3,11 +3,11 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
-import UIKit
 import Foundation
+import SKNetworking
 
 class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
