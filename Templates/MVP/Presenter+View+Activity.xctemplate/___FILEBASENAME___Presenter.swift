@@ -37,14 +37,13 @@ class ___FILEBASENAMEASIDENTIFIER___: NSObject {
 
 extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Output {
     
-    
 }
 
 // MARK: - RequestExecuting -
 
 extension ___FILEBASENAMEASIDENTIFIER___: RequestExecuting {
     
-    func activityView() -> ActivityViewable? {
+    var activityView: ActivityViewable? {
         return view
     }
     
@@ -54,7 +53,7 @@ extension ___FILEBASENAMEASIDENTIFIER___: RequestExecuting {
 
 extension ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling {
     
-    func alertView() -> AlertViewable? {
+    var alertView: AlertViewable? {
         return view
     }
     
