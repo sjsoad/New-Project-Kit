@@ -18,4 +18,6 @@ class ___FILEBASENAMEASIDENTIFIER___: APIRequesting {
     init(<#parameters#>) {
     }
     
+    // MARK: - APIRequesting -
+    
 }
