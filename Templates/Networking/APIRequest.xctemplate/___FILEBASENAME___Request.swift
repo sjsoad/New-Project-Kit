@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SKNetworkingLib
+import SKNetworking
 
 typealias ___VARIABLE_fileName:identifier___ResponseType = () // Example: Bool
 

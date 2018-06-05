@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SKNetworkingLib
+import SKNetworking
 
 class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     

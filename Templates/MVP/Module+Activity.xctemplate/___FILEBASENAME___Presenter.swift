@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SKActivityViewable
 import SKAlertViewable
-import SKNetworkingLib
+import SKNetworking
 
 protocol ___VARIABLE_fileName:identifier___Interface: class, ActivityViewable, AlertViewable {
     

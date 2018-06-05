@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>DefaultCompletionName</key>
-	<string>Cell and View Model</string>
+	<string>Cell and Presenter</string>
 	<key>Description</key>
-	<string>Generates Configurable Cell and View Model</string>
+	<string>Generates Presenter + Cell</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>MainTemplateFiles</key>
 	<array>
 		<string>___FILEBASENAME___Cell.swift</string>
-		<string>___FILEBASENAME___DataSourceModel.swift</string>
+		<string>___FILEBASENAME___CellPresenter.swift</string>
 	</array>
 	<key>Platforms</key>
 	<array>
 		<string>com.apple.platform.iphoneos</string>
 	</array>
 	<key>Summary</key>
-	<string>Generates Configurable Cell and View Model</string>
+	<string>Generates Presenter + Cell</string>
 	<key>Options</key>
 	<array>
 		<dict>
