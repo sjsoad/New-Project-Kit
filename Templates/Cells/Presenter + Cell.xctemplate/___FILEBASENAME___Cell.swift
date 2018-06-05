@@ -11,11 +11,11 @@ import UIKit
 import Foundation
 import SKDataSources
 
-class ___FILEBASENAMEASIDENTIFIER___: <#cell type#>, Interface, Reusable, Nibable, ___VARIABLE_fileName:identifier___CellInterface {
+class ___FILEBASENAMEASIDENTIFIER___: <#cell type#>, DataSourceObjectInterface, Reusable, Nibable, ___VARIABLE_fileName:identifier___CellInterface {
     
     var presenter: ___VARIABLE_fileName:identifier___Output?
     
-    // MARK: - Interface -
+    // MARK: - DataSourceObjectInterface -
     
     func set(presenter: DataSourceObjectPresenter) {
         self.presenter = presenter as? ___VARIABLE_fileName:identifier___Output
