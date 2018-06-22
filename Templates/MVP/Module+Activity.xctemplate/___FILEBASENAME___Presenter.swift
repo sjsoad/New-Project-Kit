@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 import SKActivityViewable
 import SKAlertViewable
 import SKNetworking

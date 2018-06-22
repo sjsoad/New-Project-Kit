@@ -6,7 +6,6 @@
 //  ___COPYRIGHT___
 //
 
-import UIKit
 import Foundation
 import SKDataSources
 
@@ -32,8 +31,8 @@ class ___FILEBASENAMEASIDENTIFIER___: DataSourceObjectPresenter {
     
     // MARK: - DataSourceObjectPresenter -
     
-    func set(view: UIView) {
-        self.view = view as? ___VARIABLE_fileName:identifier___CellInterface
+    func set(view: ___VARIABLE_fileName:identifier___CellInterface) {
+        self.view = view
     }
     
     func configure() {
