@@ -31,8 +31,8 @@ class ___FILEBASENAMEASIDENTIFIER___: DataSourceObjectPresenter {
     
     // MARK: - DataSourceObjectPresenter -
     
-    func set(view: ___VARIABLE_fileName:identifier___CellInterface) {
-        self.view = view
+    func set(view: UIView) {
+        self.view = view as? ___VARIABLE_fileName:identifier___CellInterface
     }
     
     func configure() {
