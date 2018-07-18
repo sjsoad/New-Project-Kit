@@ -5,7 +5,6 @@
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  ___COPYRIGHT___
 //
-// use APIClient for executing this requests
 
 import UIKit
 import Foundation
