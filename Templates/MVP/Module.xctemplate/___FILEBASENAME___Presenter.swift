@@ -29,7 +29,7 @@ class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
 }
 
-// MARK: - ___FILEBASENAMEASIDENTIFIER___Output -
+// MARK: - ___VARIABLE_fileName:identifier___Output
 
 extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Output {
 
