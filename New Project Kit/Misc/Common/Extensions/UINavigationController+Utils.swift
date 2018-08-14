@@ -12,21 +12,13 @@ extension UINavigationController {
 
     @discardableResult
     func pop<ControllerClass: UIViewController>(to class: ControllerClass.Type) -> Bool {
-        let controllers = viewControllers.filter({ (viewController) -> Bool in
-            return viewController is ControllerClass
-        })
-        if let vc = controllers.last {
-            popToViewController(vc, animated: true)
-            return true
-        }
-        return false
+        guard let controller = viewControllers.reversed().first(where: { $0 is ControllerClass }) else { return false }
+        popToViewController(controller, animated: true)
+        return true
     }
     
     func stackContains<ControllerClass: UIViewController>(viewControllerOfType class: ControllerClass.Type) -> Bool {
-        let controllers = viewControllers.filter({ (viewController) -> Bool in
-            return viewController is ControllerClass
-        })
-        return controllers.last != nil
+        return viewControllers.contains(where: { $0 is ControllerClass })
     }
     
 }
