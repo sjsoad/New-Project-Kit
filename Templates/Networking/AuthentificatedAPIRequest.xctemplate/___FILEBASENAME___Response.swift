@@ -13,7 +13,7 @@ class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
     var result: ___VARIABLE_fileName:identifier___ResponseType?
     
-    required init(JSON: AnyObject) {
+    required init(JSON: Any) {
         
     }
 }
