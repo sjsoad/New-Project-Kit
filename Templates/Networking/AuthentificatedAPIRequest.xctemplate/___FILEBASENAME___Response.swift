@@ -11,7 +11,7 @@ import SKNetworking
 
 class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
-    var result: ___VARIABLE_fileName:identifier___ResponseType?
+    var result: <#Bool#>?
     
     required init(JSON: Any) {
         
