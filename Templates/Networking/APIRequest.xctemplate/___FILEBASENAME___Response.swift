@@ -13,7 +13,7 @@ class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
     var result: <#Bool#>?
     
-    required init(JSON: Any) {
+    required init(with value: Any) {
         
     }
 }

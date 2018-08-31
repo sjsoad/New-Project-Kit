@@ -11,8 +11,6 @@ import SKNetworking
 
 class ___FILEBASENAMEASIDENTIFIER___: APIRequesting {
     
-    typealias ResponseType = ___VARIABLE_fileName:identifier___Response
-    
     init(<#parameters#>) {
     }
     
