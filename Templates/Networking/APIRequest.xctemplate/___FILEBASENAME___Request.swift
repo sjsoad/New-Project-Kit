@@ -9,11 +9,11 @@
 import Foundation
 import SKNetworking
 
-class ___FILEBASENAMEASIDENTIFIER___: APIRequesting {
-    
-    init(<#parameters#>) {
-    }
+struct ___FILEBASENAMEASIDENTIFIER___: APIRequesting {
     
     // MARK: - APIRequesting -
+    
+    var requestType: RequestType { return <#.simple(nil)#> }
+    var urlString: String { return <#""#> }
     
 }
