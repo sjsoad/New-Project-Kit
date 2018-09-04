@@ -8,6 +8,14 @@
 
 import Foundation
 
+protocol ___VARIABLE_fileName:identifier___Interface: class {
+    
+}
+
+protocol ___VARIABLE_fileName:identifier___Output {
+    
+}
+
 class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?

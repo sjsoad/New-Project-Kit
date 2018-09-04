@@ -15,10 +15,8 @@
 	<key>MainTemplateFiles</key>
 	<array>
 		<string>___FILEBASENAME___ViewController.swift</string>
-		<string>___FILEBASENAME___Interface.swift</string>
 		<string>___FILEBASENAME___Presenter.swift</string>
 		<string>___FILEBASENAME___ViewController.xib</string>
-		<string>___FILEBASENAME___Output.swift</string>
 		<string>___FILEBASENAME___Router.swift</string>
 	</array>
 	<key>Summary</key>

@@ -9,7 +9,15 @@
 import Foundation
 import SKActivityViewable
 import SKAlertViewable
-import SKNetworkingLib
+import SKNetworking
+
+protocol ___VARIABLE_fileName:identifier___Interface: class, ActivityViewable, AlertViewable {
+    
+}
+
+protocol ___VARIABLE_fileName:identifier___Output {
+    
+}
 
 class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
