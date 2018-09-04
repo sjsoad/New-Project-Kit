@@ -17,11 +17,10 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController, ___VARIABLE_fileName:ide
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    // MARK: - ___VARIABLE_fileName:identifier___Interface -
     
+    // MARK: - ___VARIABLE_fileName:identifier___Interface -
 }

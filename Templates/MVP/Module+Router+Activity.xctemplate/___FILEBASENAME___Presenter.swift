@@ -9,25 +9,16 @@
 import Foundation
 import SKActivityViewable
 import SKAlertViewable
-import SKNetworking
-
-protocol ___VARIABLE_fileName:identifier___Interface: class, ActivityViewable, AlertViewable {
-    
-}
-
-protocol ___VARIABLE_fileName:identifier___Output {
-    
-}
+import SKNetworkingLib
 
 class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?
+    private var router: ___VARIABLE_fileName:identifier___Routable
     
-    private var servicesRepository: ServicesRepository
-    
-    init(with view: ___VARIABLE_fileName:identifier___Interface, servicesRepository: ServicesRepository) {
+    init(with view: ___VARIABLE_fileName:identifier___Interface, router: ___VARIABLE_fileName:identifier___Routable) {
         self.view = view
-        self.servicesRepository = servicesRepository
+        self.router = router
     }
     
 }
