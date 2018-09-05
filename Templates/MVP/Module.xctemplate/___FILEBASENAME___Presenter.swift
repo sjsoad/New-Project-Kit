@@ -20,11 +20,8 @@ class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?
     
-    private var servicesRepository: ServicesRepository
-    
-    init(with view: ___VARIABLE_fileName:identifier___Interface, servicesRepository: ServicesRepository) {
+    init(with view: ___VARIABLE_fileName:identifier___Interface) {
         self.view = view
-        self.servicesRepository = servicesRepository
     }
     
 }
