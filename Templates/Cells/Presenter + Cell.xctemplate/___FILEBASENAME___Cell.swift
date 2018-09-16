@@ -10,16 +10,20 @@ import UIKit
 import Foundation
 import SKDataSources
 
-class ___FILEBASENAMEASIDENTIFIER___: <#cell type#>, DataSourceObjectInterface, Reusable, Nibable, ___VARIABLE_fileName:identifier___CellInterface {
+class ___FILEBASENAMEASIDENTIFIER___: <#cell type#>,
     
     var presenter: ___VARIABLE_fileName:identifier___Output?
     
-    // MARK: - DataSourceObjectInterface -
+    // MARK: - ___VARIABLE_fileName:identifier___CellInterface -
     
-    func set(presenter: DataSourceObjectPresenter) {
+}
+
+// MARK: - ViewType -
+
+extension ___FILEBASENAMEASIDENTIFIER___: ViewType, Reusable, Nibable {
+    
+    func set(presenter: PresenterType) {
         self.presenter = presenter as? ___VARIABLE_fileName:identifier___Output
     }
-    
-    // MARK: - ___VARIABLE_fileName:identifier___CellInterface -
     
 }
