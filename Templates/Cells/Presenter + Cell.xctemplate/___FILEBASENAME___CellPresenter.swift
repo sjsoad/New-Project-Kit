@@ -17,9 +17,10 @@ protocol ___VARIABLE_fileName:identifier___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___: DataSourceObjectPresenter {
+class ___FILEBASENAMEASIDENTIFIER___ {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?
+    private(set) var reuseIdentifier: String
     private(set) var model: <#ModelType#>
     
     init(with objectModel: <#ModelType#>, cellIdentifier: String) {
@@ -36,9 +37,8 @@ extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Outp
 
 // MARK: - PresenterType -
 
-extension TestCellPresenter: PresenterType {
+extension ___FILEBASENAMEASIDENTIFIER___: PresenterType {
     
-    private(set) var reuseIdentifier: String
     
     func set(view: ViewType) {
         self.view = view as? ___VARIABLE_fileName:identifier___Interface
