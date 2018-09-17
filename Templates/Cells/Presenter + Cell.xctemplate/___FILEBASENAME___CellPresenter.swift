@@ -9,7 +9,7 @@
 import Foundation
 import SKDataSources
 
-protocol ___VARIABLE_fileName:identifier___CellInterface: class {
+protocol ___VARIABLE_fileName:identifier___Interface: class {
     
 }
 
@@ -19,7 +19,7 @@ protocol ___VARIABLE_fileName:identifier___Output {
 
 class ___FILEBASENAMEASIDENTIFIER___: DataSourceObjectPresenter {
     
-    private weak var view: ___VARIABLE_fileName:identifier___CellInterface?
+    private weak var view: ___VARIABLE_fileName:identifier___Interface?
     private(set) var model: <#ModelType#>
     
     init(with objectModel: <#ModelType#>, cellIdentifier: String) {
@@ -41,7 +41,7 @@ extension TestCellPresenter: PresenterType {
     private(set) var reuseIdentifier: String
     
     func set(view: ViewType) {
-        self.view = view as? ___VARIABLE_fileName:identifier___CellInterface
+        self.view = view as? ___VARIABLE_fileName:identifier___Interface
     }
     
     func configure() {

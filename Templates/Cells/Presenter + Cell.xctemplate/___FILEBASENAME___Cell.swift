@@ -10,11 +10,11 @@ import UIKit
 import Foundation
 import SKDataSources
 
-class ___FILEBASENAMEASIDENTIFIER___: <#cell type#>,
+class ___FILEBASENAMEASIDENTIFIER___: <#cell type#>, ___VARIABLE_fileName:identifier___Interface {
     
     var presenter: ___VARIABLE_fileName:identifier___Output?
     
-    // MARK: - ___VARIABLE_fileName:identifier___CellInterface -
+    // MARK: - ___VARIABLE_fileName:identifier___Interface -
     
 }
 
