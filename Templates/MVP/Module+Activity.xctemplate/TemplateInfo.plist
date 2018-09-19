@@ -11,6 +11,7 @@
 	<key>MainTemplateFiles</key>
 	<array>
 		<string>___FILEBASENAME___ViewController.swift</string>
+		<string>___FILEBASENAME___Builder.swift</string>
 		<string>___FILEBASENAME___Presenter.swift</string>
 		<string>___FILEBASENAME___ViewController.xib</string>
 	</array>
