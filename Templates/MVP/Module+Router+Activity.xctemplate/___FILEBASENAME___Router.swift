@@ -12,7 +12,7 @@ protocol ___VARIABLE_fileName:identifier___Routable {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Routable {
+class ___FILEBASENAMEASIDENTIFIER___ {
     
     private weak var viewController: UIViewController?
 
@@ -21,3 +21,10 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Routable
     }
     
 }
+
+// MARK: - ___VARIABLE_fileName:identifier___Routable -
+
+extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Routable {
+    
+}
+
