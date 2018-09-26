@@ -10,7 +10,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: UIViewController, ___VARIABLE_fileName:identifier___Interface {
 
-    var presenter: ___VARIABLE_fileName:identifier___Output?
+    private var presenter: ___VARIABLE_fileName:identifier___Output?
 
     // MARK: - Lifecycle -
     
@@ -23,4 +23,12 @@ class ___FILEBASENAMEASIDENTIFIER___: UIViewController, ___VARIABLE_fileName:ide
     }
     
     // MARK: - ___VARIABLE_fileName:identifier___Interface -
+}
+
+extension ___FILEBASENAMEASIDENTIFIER___ {
+    
+    func set(_ presenter: ___VARIABLE_fileName:identifier___Output?) {
+        self.presenter = presenter
+    }
+    
 }

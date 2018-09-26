@@ -13,7 +13,7 @@ struct ___FILEBASENAMEASIDENTIFIER___ {
     static func build() -> UIViewController {
         let viewController = ___VARIABLE_fileName:identifier___ViewController()
         let presenter = ___VARIABLE_fileName:identifier___Presenter(with: viewController)
-        viewController.presenter = presenter
+        viewController.set(presenter)
         return viewController
     }
     

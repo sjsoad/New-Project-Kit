@@ -14,7 +14,7 @@ struct ___FILEBASENAMEASIDENTIFIER___ {
         let viewController = ___VARIABLE_fileName:identifier___ViewController()
         let router = ___VARIABLE_fileName:identifier___Router(with: viewController)
         let presenter = ___VARIABLE_fileName:identifier___Presenter(with: viewController, router)
-        viewController.presenter = presenter
+        viewController.set(presenter)
         return viewController
     }
     
