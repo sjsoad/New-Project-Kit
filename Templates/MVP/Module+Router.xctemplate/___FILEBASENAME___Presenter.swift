@@ -19,7 +19,7 @@ protocol ___VARIABLE_fileName:identifier___Output {
 class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?
-    private var router: ___VARIABLE_fileName:identifier___Routable
+    private let router: ___VARIABLE_fileName:identifier___Routable
     
     init(with view: ___VARIABLE_fileName:identifier___Interface, _ router: ___VARIABLE_fileName:identifier___Routable) {
         self.view = view
