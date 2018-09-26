@@ -39,8 +39,8 @@ extension UIView {
     }
 }
 
-extension CGColor {
-    fileprivate var UIColor: UIKit.UIColor {
+fileprivate extension CGColor {
+    var UIColor: UIKit.UIColor {
         return UIKit.UIColor(cgColor: self)
     }
 }
