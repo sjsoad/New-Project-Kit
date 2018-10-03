@@ -9,7 +9,7 @@
 import Foundation
 import SKNetworkingLib
 
-struct ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
+class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
     var result: <#Bool#>?
     
