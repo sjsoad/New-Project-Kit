@@ -13,6 +13,8 @@ struct ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
     var result: <#Bool#>?
     
+    // MARK: - APIResponsing -
+    
     required init(with value: Any) {
         
     }
