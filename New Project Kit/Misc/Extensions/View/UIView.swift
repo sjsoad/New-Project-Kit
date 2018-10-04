@@ -10,15 +10,36 @@ import UIKit
 
 extension UIView {
     
-    // MARK: - Load -
+    // MARK: - IBInspectable -
     
-    static var nib: UINib {
-        return UINib(nibName: "\(self)", bundle: nil)
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
     }
     
-    static func instantiateFromNib() -> Self? {
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+        get {
+            return layer.borderColor?.uiColor
+        }
+    }
+    
+    // MARK: - Load -
+    
+    static func nib(with name: String? = nil) -> UINib {
+        let nibName = name ?? "\(self)"
+        return UINib(nibName: nibName, bundle: nil)
+    }
+    
+    static func instantiateFromNib(with name: String? = nil) -> Self? {
         func instanceFromNib<T: UIView>() -> T? {
-            return nib.instantiate() as? T
+            return nib(with: name).instantiate() as? T
         }
         return instanceFromNib()
     }
@@ -54,24 +75,14 @@ extension UIView {
         layer.masksToBounds = true
     }
     
-    // MARK: - IBInspectable -
+    // MARK: - Animations -
     
-    @IBInspectable var borderWidth: CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
-        get {
-            return layer.borderWidth
-        }
+    static func animate(_ animations: @escaping () -> Void, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: 0.25, animations: animations, completion: completion)
     }
     
-    @IBInspectable var borderColor: UIColor? {
-        set {
-            layer.borderColor = newValue?.cgColor
-        }
-        get {
-            return layer.borderColor?.uiColor
-        }
+    static func animate(_ animations: @escaping () -> Void, with delay: TimeInterval) {
+        UIView.animate(withDuration: 0.25, delay: delay, animations: animations)
     }
     
 }

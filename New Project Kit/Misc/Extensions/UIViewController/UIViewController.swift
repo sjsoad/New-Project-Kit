@@ -19,6 +19,7 @@ extension UIViewController {
     func addChild(_ viewController: UIViewController, to container: UIStackView) {
         addChild(viewController, with: { childView in
             container.addArrangedSubview(childView)
+            container.layoutIfNeeded()
         })
     }
     
@@ -30,15 +31,5 @@ extension UIViewController {
         handler(childView)
         viewController.didMove(toParent: self)
     }
-    
-    // MARK: - Animations -
-    
-    func animate(_ animations: @escaping () -> Void) {
-        UIView.animate(withDuration: 0.25, animations: animations)
-    }
-    
-    func animate(_ animations: @escaping () -> Void, with delay: TimeInterval) {
-        UIView.animate(withDuration: 0.25, delay: delay, animations: animations)
-    }
-    
+
 }
