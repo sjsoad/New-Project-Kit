@@ -49,16 +49,10 @@ extension UIView {
     func add(to container: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(self)
-        addConstraint(for: self, to: container, attribute: .top)
-        addConstraint(for: self, to: container, attribute: .leading)
-        addConstraint(for: self, to: container, attribute: .trailing)
-        addConstraint(for: self, to: container, attribute: .bottom)
-    }
-    
-    func addConstraint(for childView: UIView, to container: UIView, attribute: NSLayoutConstraint.Attribute) {
-        let constraint = NSLayoutConstraint(item: childView, attribute: attribute, relatedBy: .equal, toItem: container, attribute: attribute,
-                                            multiplier: 1, constant: 0)
-        container.addConstraint(constraint)
+        topAnchor.constraint(equalTo: container.topAnchor).isActive = true
+        leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
     }
     
     // MARK: - Mask -
@@ -83,6 +77,13 @@ extension UIView {
     
     static func animate(_ animations: @escaping () -> Void, with delay: TimeInterval) {
         UIView.animate(withDuration: 0.25, delay: delay, animations: animations)
+    }
+    
+    // MARK: - Utils -
+    
+    func center(in bounds: CGRect) {
+        frame.origin.x = max(0, (bounds.size.width - frame.size.width) * 0.5)
+        frame.origin.y = max(0, (bounds.size.height - frame.size.height) * 0.5)
     }
     
 }
