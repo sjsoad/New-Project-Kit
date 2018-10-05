@@ -6,7 +6,7 @@
 //  Copyright © 2018 Sergey. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIGestureRecognizer {
     
