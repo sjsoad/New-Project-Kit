@@ -1,0 +1,12 @@
+xcassets:
+  inputs: Hanabi/Resources/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Hanabi/Misc/Assets.swift
+    params: {enumName: Assets}
+fonts:
+  inputs: 
+    - Hanabi/Resources/Fonts
+  outputs:
+    templateName: swift4
+    output: Hanabi/Misc/UIFont+AppFonts.swift
