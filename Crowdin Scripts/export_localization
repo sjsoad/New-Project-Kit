@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Main parameters
+readonly LOCALIZABLEFILENAME="Localizable.strings"
+readonly FILERRORCODE=5 # error code if file already exists
+# Parameters that can be set from command line
+PROJECTNAME="localizable"
+PROJECTKEY="97e80f1ace2c0ac7e843d44f126dc4cd"
+SOURCEFOLDER="./Resources/Base.lproj"
+
+# Help
+help() {
+echo "-n | --name:        Name of crowdin project"
+echo "-k | --key:         Key of crowdin project"
+echo "-s | --source:      Source folder for uploading"
+}
+
+add() {
+  echo adding files to crowdin
+  curl \
+    -F "files[$LOCALIZABLEFILENAME]=@$SOURCEFOLDER/$LOCALIZABLEFILENAME" \
+    https://api.crowdin.com/api/project/$PROJECTNAME/add-file?key=$PROJECTKEY | \
+    grep -e code |
+    if [ $(sed 's|<code>\(.*\)<\/code>$|\1|g') == $FILERRORCODE ]
+    then
+      echo file already exists
+      return 1
+    fi
+}
+
+update() {
+  echo updating files to crowdin
+  curl \
+    -F "files[$LOCALIZABLEFILENAME]=@$SOURCEFOLDER/$LOCALIZABLEFILENAME" \
+    https://api.crowdin.com/api/project/$PROJECTNAME/update-file?key=$PROJECTKEY
+}
+
+# Script start
+echo reading input parameters
+while [ "$1" != "" ]; do
+    case $1 in
+        -n | --name )           shift
+                                PROJECTNAME=$1
+                                ;;
+        -k | --key )            shift
+                                PROJECTKEY=$1
+                                ;;
+        -s | --source )    shift
+                                SOURCEFOLDER=$1
+                                ;;
+        -h | --help )           help
+                                exit
+                                ;;
+    esac
+    shift
+done
+if [ -z "$PROJECTNAME" ]
+  then
+  echo "Poject name not set, use -n | --name to set parameter"
+  exit
+fi
+if [ -z "$PROJECTKEY" ]
+  then
+  echo "Poject key not set, use -k | --key to set parameter"
+  exit
+fi
+if [ -z "$SOURCEFOLDER" ]
+  then
+  echo "Source folder not set, use -s | --source to set parameter"
+  exit
+fi
+echo start execution
+add || update

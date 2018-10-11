@@ -1,0 +1,118 @@
+#!/bin/bash
+
+# Main parameters
+readonly TEMPFOLDER="./tmp"
+readonly ZIPNAME="localizations.zip"
+readonly LOCALIZABLEFILENAME="Localizable.strings"
+
+# Parameters that can be set from command line
+PROJECTNAME="localizable"
+PROJECTKEY="97e80f1ace2c0ac7e843d44f126dc4cd"
+DESTINATIONFOLDER="./Resources"
+COPYFILES="yes"
+
+# Help
+help() {
+echo "-n | --name:        Name of crowdin project"
+echo "-k | --key:         Key of crowdin project"
+echo "-d | --destination: Destination folder for copying downloaded files"
+echo "-c | --copy:        Copy or just unzip files (yes/no)"
+}
+
+# Installs Brew if not installed
+installBrew() {
+  if commandExists brew
+  then
+    echo brew already installed
+    return 0
+  fi
+  echo installing brew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
+
+# Installs wget if not installed
+installWget() {
+  if commandExists wget
+  then
+    echo wget already installed
+    return 0
+  fi
+  echo installing wget
+  brew install wget --with-libressl
+}
+
+# Downloads zip archive of localizations from crowdin
+donwloadTranslationsZip() {
+  echo downloading zip
+  wget -O $ZIPNAME https://api.crowdin.com/api/project/$PROJECTNAME/download/all.zip?key=$PROJECTKEY
+}
+
+# Copy files to destination
+copyFiles() {
+  for dir in $1; do
+    languageIdentifier=$(basename "$dir")
+    sourcePath="$dir/$LOCALIZABLEFILENAME"
+    destinationPath="$DESTINATIONFOLDER/$languageIdentifier.lproj/$LOCALIZABLEFILENAME"
+    echo copying "$languageIdentifier"
+    echo from "$sourcePath"
+    echo to "$destinationPath"
+    cp $sourcePath $destinationPath
+  done
+}
+
+# Clear all tmp files
+clear() {
+  rm $ZIPNAME
+  rm -rf $TEMPFOLDER
+}
+
+# Checks if command exists
+commandExists() {
+  which $1 >/dev/null;
+  return $?
+}
+# Script start
+echo reading input parameters
+while [ "$1" != "" ]; do
+    case $1 in
+        -n | --name )           shift
+                                PROJECTNAME=$1
+                                ;;
+        -k | --key )            shift
+                                PROJECTKEY=$1
+                                ;;
+        -d | --destination )    shift
+                                DESTINATIONFOLDER=$1
+                                ;;
+        -c | --copy )           shift
+                                COPYFILES=$1
+                                ;;
+        -h | --help )           help
+                                exit
+                                ;;
+    esac
+    shift
+done
+if [ -z "$PROJECTNAME" ]
+  then
+  echo "Poject name not set, use -n | --name to set parameter"
+  exit
+fi
+if [ -z "$PROJECTKEY" ]
+  then
+  echo "Poject key not set, use -k | --key to set parameter"
+  exit
+fi
+if [ -z "$DESTINATIONFOLDER" ]
+  then
+  echo "Destination folder not set, use -d | --destination to set parameter"
+  exit
+fi
+echo start execution
+if installBrew && installWget && donwloadTranslationsZip && unzip $ZIPNAME -d $TEMPFOLDER
+  then
+  if [ $COPYFILES == "yes" ]
+    then copyFiles $TEMPFOLDER/* && clear
+    else rm $ZIPNAME
+  fi
+fi
