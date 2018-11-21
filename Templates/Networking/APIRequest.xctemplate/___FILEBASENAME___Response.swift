@@ -11,7 +11,7 @@ import SKNetworkingLib
 
 class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
-    var result: <#Bool#>?
+    private(set) var result: <#Bool#>?
     
     // MARK: - APIResponsing -
     
