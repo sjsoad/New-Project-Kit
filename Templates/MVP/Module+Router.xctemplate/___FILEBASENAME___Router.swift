@@ -27,4 +27,3 @@ class ___FILEBASENAMEASIDENTIFIER___ {
 extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Routable {
     
 }
-
